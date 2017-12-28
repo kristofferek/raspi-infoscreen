@@ -1,0 +1,297 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4a5f65 , #4b4557);
+  color: #e7e0f2;
+  font-weight: 300;
+}
+
+@font-face {
+	font-family: LoveloLine;
+	src: url(./assets/LoveloLine.otf);
+}
+@font-face {
+	font-family: Lovelo;
+	src: url(./assets/Lovelo_Black.otf);
+}
+@font-face {
+	font-family: LoveloBold;
+	src: url(./assets/Lovelo_Bold.otf);
+}
+
+#grid {
+  float: none;
+  width: 100vw;
+  height: 100vh;
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#bus, #weather, #news {
+  padding: 2%;
+  padding-top: 1%;
+  width: 38vw;
+  max-height: 400px;
+}
+
+#bus, #news {
+  width: 31vw;
+}
+
+#weather {
+  padding-top: 1%;
+}
+
+.grid-icon {
+  margin: auto;
+  display: block;
+  width: 8vw;
+  opacity: 0.7;
+}
+
+.green-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 110%;
+  color: #70c8ba;
+  margin-bottom: 4%;
+  margin-top: 6%;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ------   BUS  ------ */
+
+.next-trips {
+  width: 100%;
+}
+
+.bus-trip {
+  font-family: 'Montserrat', sans-serif;
+  float:none;
+  display:inline-flex;
+}
+
+.bus-info {
+  margin-bottom: 8%;
+}
+
+.bus-line {
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 120%;
+}
+
+.bus-dir {
+  font-size: 60%;
+  opacity: 0.8;
+  margin-top: -3px;
+  font-weight: 100;
+}
+
+.bus-time {
+  margin-left: auto;
+  margin-right:5%;
+  margin-bottom: 5%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.bus-dep-time {
+  font-size: 90%;
+  vertical-align: baseline;
+  display: flex;
+}
+
+.bus-dep-time span {
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.bus-time-left {
+  padding-left: 20px;
+  color: #f1eaff;
+  display: flex;
+  vertical-align: baseline;
+  min-width: 25px;
+  margin-bottom: 3px;
+}
+
+.bus-time-left>div {
+  align-self: flex-end;
+  font-size: 150%;
+  font-weight: 500;
+}
+
+
+/*-------- WEATHER ----------- */
+
+#clock {
+  font-size: 430%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 1.3vh auto;
+  text-align: center;
+  color: #70c8ba;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+#currently-forcast {
+  display: table;
+  margin: 0 auto;
+  font-size: 140%;
+}
+
+#currently-forcast .symb {
+  display:table-cell;
+  width: 10vw;
+  opacity: 0.7;
+}
+
+#currently-forcast .info {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 3vw;
+}
+
+#currently-forcast .temp {
+  display: block;
+}
+
+#currently-forcast .temp h1 {
+  font-weight: 400;
+  display: table-cell;
+  color: #f1eaff;
+}
+
+#currently-forcast .windspeed {
+  font-size: 80%;
+  opacity: 0.7;
+}
+
+.celsius {
+  font-size: 50%;
+  margin-top: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#hourly-forcasts {
+  margin-top: 4vh;
+  font-size: 95%;
+  display:flex;
+  width: 38vw;
+}
+
+.hourly-forcast {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hourly-forcast .time {
+  margin: 0 auto;
+  display: inline-block;
+  color: #70c8ba;
+  font-weight: 300;
+}
+
+.hourly-forcast .symb-info {
+  display: table;
+  margin: 0 auto;
+}
+
+.hourly-forcast .symb {
+  display:table-cell;
+  width: 7vw;
+  opacity: 0.7;
+}
+
+.hourly-forcast .info {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 2vw;
+}
+
+.hourly-forcast .temp {
+  display: block;
+}
+
+.hourly-forcast .temp h1 {
+  font-weight: 400;
+  display: table-cell;
+  color: #f1eaff;
+}
+
+.hourly-forcast .windspeed {
+  font-size: 80%;
+  opacity: 0.7;
+  text-align:left;
+}
+
+#daily-forcasts {
+  margin-top: 5vh;
+  font-size: 80%;
+  display:flex;
+  width: 38vw;
+}
+
+.daily-forcast {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  width: 25%;
+}
+
+.daily-forcast .day {
+  margin: 0 auto;
+  display: inline-block;
+  color: #70c8ba;
+  font-weight: 300;
+}
+
+.daily-forcast .symb-info {
+  display: block;
+  margin: 0 auto;
+}
+
+.daily-forcast .symb {
+  display:inline-block;
+  width: 5vw;
+  opacity: 0.7;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.daily-forcast .info {
+  display: block;
+  vertical-align: middle;
+}
+
+.daily-forcast .temp {
+  display: block;
+}
+
+.daily-forcast .temp h1 {
+  font-weight: 500;
+  display: inline;
+  font-size: 170%;
+  color: #f1eaff;
+}
+
+.daily-forcast .windspeed {
+  font-size: 85%;
+  opacity: 0.7;
+}
+
+
+/* --------  NEWS  --------- */
+#news>.green-header {
+  margin-bottom: 0;
+}
+
+.article .title {
+  margin: 6% 0;
+  font-weight: 400;
+  font-size: 80%;
+  color: #f1eaff;
+}
