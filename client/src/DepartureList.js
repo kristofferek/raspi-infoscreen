@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import moment from 'moment';
 
 class DepartureList extends Component {
 
   constructor(props) {
     super(props);
+
+    this.state = { }
 
     this.getShortDir = this.getShortDir.bind(this);
     this.getTimeLeft = this.getTimeLeft.bind(this);
@@ -27,7 +30,7 @@ class DepartureList extends Component {
                       <span>{hit.rtTime}</span>
                     </div>
                     <div className="bus-time-left">
-                      <div>{this.getTimeLeft(hit.rtTime)}</div>
+                      <div>{this.getTimeLeft(hit.rtDate, hit.rtTime)}</div>
                     </div>
                   </div>
                 ) :
@@ -37,7 +40,7 @@ class DepartureList extends Component {
                       <span>{hit.time}</span>
                     </div>
                     <div className="bus-time-left">
-                      <div>{this.getTimeLeft(hit.time)}</div>
+                      <div>{this.getTimeLeft(hit.date, hit.time)}</div>
                     </div>
                   </div>
                 )}
@@ -48,13 +51,10 @@ class DepartureList extends Component {
     );
   }
 
-  getTimeLeft(time) {
-    var date = new Date();
-    var hourDiff = (parseInt(time.slice(0,3), 10)-date.getHours());
-    if (hourDiff < 0) {
-      hourDiff = 24 + hourDiff;
-    }
-    return hourDiff*60 + parseInt(time.slice(3,5), 10) - date.getMinutes();
+  getTimeLeft(date, time) {
+    const now = moment();
+    const dep = moment(date + ' ' + time);
+    return dep.add(30, 'seconds').diff(now, 'minutes');
   }
 
   getShortDir(str) {

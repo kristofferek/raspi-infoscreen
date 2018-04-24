@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "ical2json": "^1.2.0",
+    "moment": "^2.22.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

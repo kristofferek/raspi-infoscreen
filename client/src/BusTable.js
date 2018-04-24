@@ -31,8 +31,8 @@ class BusTable extends Component {
   componentDidMount() {
     this.loadData("regnbagsgatan");
     this.loadData("hjalmar");
-    this.tRegn = setInterval(()=> this.loadData("regnbagsgatan"), 20000);
-    this.tHjalmar = setInterval(()=> this.loadData("hjalmar"), 20000);
+    this.tRegn = setInterval(()=> this.loadData("regnbagsgatan"), 10000);
+    this.tHjalmar = setInterval(()=> this.loadData("hjalmar"), 10000);
   }
 
   componentWillUnmount() {
@@ -47,7 +47,8 @@ class BusTable extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error('Something went wrong ...');
+          console.error('Nu gick det käpprätt åt helvete...');
+          return [];
         }
       })
       .then(data => {
@@ -62,13 +63,13 @@ class BusTable extends Component {
         }
         else {
           if (data.length > 4)
-            this.setState({ hjalmar: data.slice(0,4)})
+            this.setState({ hjalmar: data.slice(0,7)})
           else
             this.setState({ hjalmar: data})
         }
 
       })
-      .catch(error => console.log(error));
+      .catch(error => console.error(error));
   }
 
 }

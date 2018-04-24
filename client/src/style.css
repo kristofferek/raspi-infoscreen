@@ -41,10 +41,14 @@ html, body {
 
 #bus {
   padding-right: 1%;
+  max-height: 100%;
+  overflow: scroll;
 }
 
 #weather {
   padding-top: 1%;
+  max-height: 100%;
+  overflow: scroll;
 }
 
 .grid-icon {
@@ -295,6 +299,11 @@ html, body {
 
 
 /* --------  NEWS  --------- */
+#news {
+  max-height: 100%;
+  overflow: scroll;
+}
+
 #news>.green-header {
   margin-bottom: 0;
 }
@@ -302,6 +311,20 @@ html, body {
 .article .title {
   margin: 6.5% 0;
   font-weight: 400;
+  font-size: 100%;
+  color: #c0ffff;
+}
+
+.article p {
+  margin: 0.3em 0;
+}
+
+.article .desc {
   font-size: 85%;
-  color: #f1eaff;
+  color: #f0e9fe;
+}
+
+.article .source {
+  font-size: 70%;
+  color: #ccc;
 }

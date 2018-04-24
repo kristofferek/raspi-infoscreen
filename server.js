@@ -27,10 +27,10 @@ let api;
 async function authorize() {
   console.log("running authorize");
   vasttrafik.authorize(key, secret, 0)
-  .then(token => {
-    vasttrafik.setAccessToken(token);
-    api = new vasttrafik.DepartureBoardApi();
-  });
+    .then(token => {
+      vasttrafik.setAccessToken(token);
+      api = new vasttrafik.DepartureBoardApi();
+    });
 }
 
 authorize();
@@ -42,7 +42,7 @@ async function fetch_departures(id, stopsAt) {
   var time = _date.getHours() + ":" + (_date.getMinutes()+7);
   var opts = {'timeSpan': 300, 'needJourneyDetail': 0, 'maxDeparturesPerLine': 2, 'direction': stopsAt}
 
-  let res = await api.getDepartureBoard(id, _date, time , opts);
+  let res = await api.getDepartureBoard(id, _date, time , opts).set({ciphers: 'DES-CBC3-SHA'});
   return res.text;
 }
 
