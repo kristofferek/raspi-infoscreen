@@ -13,6 +13,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "moment": "^2.22.1",
     "superagent": "^3.8.2",
     "vasttrafik-api": "^1.1.1"
   }

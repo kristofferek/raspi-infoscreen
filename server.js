@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const superagent = require('superagent');
 const vasttrafik = require('vasttrafik-api');
+const moment = require('moment');
 
 const app = express();
 
@@ -38,11 +39,12 @@ setInterval(authorize, 1000000);
 
 async function fetch_departures(id, stopsAt) {
 
-  var _date = new Date();
-  var time = _date.getHours() + ":" + (_date.getMinutes()+7);
+  var _date = moment();
+  var time = _date.format('HH:mm');
   var opts = {'timeSpan': 300, 'needJourneyDetail': 0, 'maxDeparturesPerLine': 2, 'direction': stopsAt}
 
-  let res = await api.getDepartureBoard(id, _date, time , opts).set({ciphers: 'DES-CBC3-SHA'});
+  let res = await api.getDepartureBoard(id, _date.format(), time , opts).set({ciphers: 'DES-CBC3-SHA'});
+  //console.log(res);
   return res.text;
 }
 
