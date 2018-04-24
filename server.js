@@ -44,7 +44,6 @@ async function fetch_departures(id, stopsAt) {
   var opts = {'timeSpan': 300, 'needJourneyDetail': 0, 'maxDeparturesPerLine': 2, 'direction': stopsAt}
 
   let res = await api.getDepartureBoard(id, _date.format(), time , opts).set({ciphers: 'DES-CBC3-SHA'});
-  //console.log(res);
   return res.text;
 }
 
