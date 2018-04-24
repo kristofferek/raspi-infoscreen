@@ -2,7 +2,7 @@
   "name": "pi-info-site",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "index.html",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -5,7 +5,7 @@ class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: new Date().toLocaleString().slice(11,16)
+      time: new Date().toLocaleString('en-GB').slice(11,17)
     };
   }
 
@@ -21,7 +21,7 @@ class Clock extends Component {
   }
 
   tick() {
-    let currentTime = new Date().toLocaleString().slice(11,16);
+    let currentTime = new Date().toLocaleString('en-GB').slice(11,17);
     this.setState({
       time: currentTime
     });

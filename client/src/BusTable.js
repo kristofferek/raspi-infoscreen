@@ -22,7 +22,7 @@ class BusTable extends Component {
       <div id="bus">
         <h3 className="green-header" >REGNBÅGSGATAN</h3>
         <DepartureList depsFromStop={this.state.regn} />
-        <h3 className="green-header" >HJALMAR BRANTING</h3>
+        <h3 id="hjalmar" className="green-header" >HJALMAR BRANTING</h3>
         <DepartureList depsFromStop={this.state.hjalmar} />
       </div>
     );
@@ -31,8 +31,8 @@ class BusTable extends Component {
   componentDidMount() {
     this.loadData("regnbagsgatan");
     this.loadData("hjalmar");
-    this.tRegn = setInterval(()=> this.loadData("regnbagsgatan"), 30000);
-    this.tHjalmar = setInterval(()=> this.loadData("hjalmar"), 30000);
+    this.tRegn = setInterval(()=> this.loadData("regnbagsgatan"), 20000);
+    this.tHjalmar = setInterval(()=> this.loadData("hjalmar"), 20000);
   }
 
   componentWillUnmount() {

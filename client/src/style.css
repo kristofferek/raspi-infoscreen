@@ -31,11 +31,16 @@ html, body {
   padding: 2%;
   padding-top: 1%;
   width: 38vw;
-  max-height: 400px;
+  max-height: 460px;
 }
 
 #bus, #news {
   width: 31vw;
+  padding-top: 2%;
+}
+
+#bus {
+  padding-right: 1%;
 }
 
 #weather {
@@ -51,12 +56,16 @@ html, body {
 
 .green-header {
   font-family: 'Montserrat', sans-serif;
-  font-size: 110%;
+  font-size: 114%;
   color: #70c8ba;
   margin-bottom: 4%;
   margin-top: 6%;
   text-align: center;
   font-weight: 500;
+}
+
+#hjalmar {
+  margin-top: 8%;
 }
 
 /* ------   BUS  ------ */
@@ -69,6 +78,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   float:none;
   display:inline-flex;
+  font-size: 123%;
 }
 
 .bus-info {
@@ -77,23 +87,21 @@ html, body {
 
 .bus-line {
   font-weight: 600;
-  opacity: 0.8;
+  opacity: 1;
   font-size: 120%;
 }
 
 .bus-dir {
   font-size: 60%;
-  opacity: 0.8;
-  margin-top: -3px;
-  font-weight: 100;
+  margin-top: -1px;
+  font-weight: 300;
 }
 
 .bus-time {
   margin-left: auto;
-  margin-right:5%;
   margin-bottom: 5%;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
 .bus-dep-time {
@@ -104,7 +112,7 @@ html, body {
 
 .bus-dep-time span {
   align-self: flex-end;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .bus-time-left {
@@ -113,20 +121,21 @@ html, body {
   display: flex;
   vertical-align: baseline;
   min-width: 25px;
-  margin-bottom: 3px;
+  margin-bottom: 12px;
 }
 
 .bus-time-left>div {
   align-self: flex-end;
   font-size: 150%;
   font-weight: 500;
+  min-width: 37px;
 }
 
 
 /*-------- WEATHER ----------- */
 
 #clock {
-  font-size: 430%;
+  font-size: 445%;
   font-family: 'Montserrat', sans-serif;
   margin: 1.3vh auto;
   text-align: center;
@@ -143,7 +152,7 @@ html, body {
 
 #currently-forcast .symb {
   display:table-cell;
-  width: 10vw;
+  width: 11vw;
   opacity: 0.7;
 }
 
@@ -176,8 +185,8 @@ html, body {
 }
 
 #hourly-forcasts {
-  margin-top: 4vh;
-  font-size: 95%;
+  margin-top: 5.5vh;
+  font-size: 105%;
   display:flex;
   width: 38vw;
 }
@@ -192,7 +201,7 @@ html, body {
   margin: 0 auto;
   display: inline-block;
   color: #70c8ba;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hourly-forcast .symb-info {
@@ -202,7 +211,7 @@ html, body {
 
 .hourly-forcast .symb {
   display:table-cell;
-  width: 7vw;
+  width: 8vw;
   opacity: 0.7;
 }
 
@@ -246,7 +255,8 @@ html, body {
   margin: 0 auto;
   display: inline-block;
   color: #70c8ba;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 110%;
 }
 
 .daily-forcast .symb-info {
@@ -256,7 +266,7 @@ html, body {
 
 .daily-forcast .symb {
   display:inline-block;
-  width: 5vw;
+  width: 6.4vw;
   opacity: 0.7;
   margin-bottom: 1vh;
   margin-top: 1vh;
@@ -274,12 +284,12 @@ html, body {
 .daily-forcast .temp h1 {
   font-weight: 500;
   display: inline;
-  font-size: 170%;
+  font-size: 175%;
   color: #f1eaff;
 }
 
 .daily-forcast .windspeed {
-  font-size: 85%;
+  font-size: 90%;
   opacity: 0.7;
 }
 
@@ -290,8 +300,8 @@ html, body {
 }
 
 .article .title {
-  margin: 6% 0;
+  margin: 6.5% 0;
   font-weight: 400;
-  font-size: 80%;
+  font-size: 85%;
   color: #f1eaff;
 }
