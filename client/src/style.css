@@ -6,6 +6,10 @@ html, body {
   font-weight: 300;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
 	font-family: LoveloLine;
 	src: url(./assets/LoveloLine.otf);
@@ -49,6 +53,7 @@ html, body {
   padding-top: 1%;
   max-height: 100%;
   overflow: scroll;
+  padding-left: 1%;
 }
 
 .grid-icon {
@@ -192,7 +197,7 @@ html, body {
   margin-top: 5.5vh;
   font-size: 105%;
   display:flex;
-  width: 38vw;
+  width: 37vw;
 }
 
 .hourly-forcast {
@@ -245,7 +250,7 @@ html, body {
   margin-top: 5vh;
   font-size: 80%;
   display:flex;
-  width: 38vw;
+  width: 37vw;
 }
 
 .daily-forcast {

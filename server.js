@@ -39,7 +39,7 @@ setInterval(authorize, 1000000);
 
 async function fetch_departures(id, stopsAt) {
 
-  var _date = moment();
+  var _date = moment().add(6, 'minutes');
   var time = _date.format('HH:mm');
   var opts = {'timeSpan': 300, 'needJourneyDetail': 0, 'maxDeparturesPerLine': 2, 'direction': stopsAt}
 
@@ -60,16 +60,6 @@ app.get('/api/hjalmar', (req, res) => {
     res.json(my_json);
   })
 });
-
-// function find_in_object(my_object, criteria1, criteria2){
-//   return my_object.filter(function(obj) {
-//     return Object.keys(criteria1).every(function(c) {
-//       return obj[c] == criteria1[c];
-//     }) || Object.keys(criteria2).every(function(c) {
-//       return obj[c] == criteria2[c];
-//     });
-//   }).splice(0,4);
-// }
 
 // Improved error messages
 process.on('unhandledRejection', r => { console.log(r); });

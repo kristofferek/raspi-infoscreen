@@ -54,7 +54,7 @@ class DepartureList extends Component {
   getTimeLeft(date, time) {
     const now = moment();
     const dep = moment(date + ' ' + time);
-    return dep.add(30, 'seconds').diff(now, 'minutes');
+    return dep.add(1, 'minutes').diff(now, 'minutes');
   }
 
   getShortDir(str) {

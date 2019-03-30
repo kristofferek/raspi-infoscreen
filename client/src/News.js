@@ -28,7 +28,7 @@ class News extends Component {
 
   componentDidMount() {
     this.loadData();
-    this.timer = setInterval(()=> this.loadData(), 100000);
+    this.timer = setInterval(()=> this.loadData(), 1000000);
   }
 
   componentWillUnmount() {

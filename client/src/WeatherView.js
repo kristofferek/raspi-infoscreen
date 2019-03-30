@@ -22,6 +22,8 @@ class WeatherView extends Component {
       return (<div id="weather"></div>)
     }
 
+    const rainOrWindSpeed = day => day.rain !== 0 ? `${day.rain} mm/h` : `${day.windSpeed} m/s`
+
     const threeHourForcast = this.state.data.slice(1,3).map(forcast =>
       <div key={forcast.id} className="hourly-forcast">
         <div className="time">{forcast.time}</div>
@@ -31,7 +33,7 @@ class WeatherView extends Component {
             <div className="temp">
               <h1>{forcast.temp}<span className="celsius">°C</span></h1>
             </div>
-            <div className="windspeed">{forcast.windSpeed} m/s</div>
+            <div className="windspeed">{rainOrWindSpeed(forcast)}</div>
           </div>
         </div>
       </div>
@@ -46,12 +48,11 @@ class WeatherView extends Component {
             <div className="temp">
               <h1>{forcast.temp}<span className="celsius">°C</span></h1>
             </div>
-            <div className="windspeed">{forcast.windSpeed} m/s</div>
+            <div className="windspeed">{rainOrWindSpeed(forcast)}</div>
           </div>
         </div>
       </div>
     );
-
 
     return (
       <div id="weather">
@@ -62,7 +63,7 @@ class WeatherView extends Component {
             <div className="temp">
               <h1>{this.state.data[0].temp}<span className="celsius">°C</span></h1>
             </div>
-            <div className="windspeed">{this.state.data[0].windSpeed} m/s</div>
+            <div className="windspeed">{rainOrWindSpeed(this.state.data[0])}</div>
           </div>
         </div>
         <div id="hourly-forcasts">

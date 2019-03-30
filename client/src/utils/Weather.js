@@ -78,6 +78,9 @@ class Weather {
       if (p.name === 'ws') {
         obj.windSpeed = p.values[0];
       }
+      if (p.name === 'pmax') {
+        obj.rain = p.values[0];
+      }
       if (p.name === 'Wsymb2') {
         obj.weatherSymbol = p.values[0];
       }
